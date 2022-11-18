@@ -1,0 +1,52 @@
+/* GENERAL */
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+/* HEADER */
+
+header {
+    flex: 3;
+    background-image: url(./images/background.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header__content {
+    margin-top: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vmin;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1em 2em;
+}
+
+
+.header__title {
+    font-size: 10vmin;
+    color: white;
+    
+}
+
+.header__icon {
+    font-size: 10vmin;
+    color: white;
+
+}
+
+.header__text {
+    align-self: center;
+    font-weight: 700;
+    margin-bottom: 1vmin;
+}
+/* MAIN */
+
+main {
+    flex: 7;
+}
