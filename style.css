@@ -2,13 +2,16 @@
 
 *, html, :root {
     box-sizing: border-box;
+    color: hsl(330, 3%, 14%);
 }
 
 .body {
     height: 100vh;
-    width: 100vmin;
-    display: grid;
-    grid-template-columns: 4fr 6fr;
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+    background-color: hsla(195, 5%, 51%, 0.1);
+    font-family: 'League Spartan', sans-serif;
 }
 
 /* HEADER */
@@ -27,24 +30,24 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3)
+    background-color: rgba(0, 0, 0, 0.2)
 }
 
 .header__content {
-    margin-top: 3em;
+    margin-top: 10em;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2vmin;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 1em 2em;
     z-index: 1000;
 }
 
-
 .header__title {
     font-size: 10vmin;
     color: white;
+    font-family: 'Viga', sans-serif;
     
 }
 
@@ -56,29 +59,37 @@
 
 .header__text {
     align-self: center;
-    font-weight: 700;
-    margin-bottom: 1vmin;
+    font-weight: 600;
+    font-size: .9em;
+    margin-bottom: 2vmin;
+    color: white;
+    z-index: 1000;
+    letter-spacing: .1em;
 }
 /* MAIN */
 
 .main {
     height: 100vmin;
-    padding: 1em 2em;
-    display: grid;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     gap: 2em;
+    padding-top: 7em;
+    width: 100%;
+    
 }
-
 /* MAIN - TEXT */
 
 .main__text {
     text-align: justify;
     line-height: 1.2em;
+    font-size: 3vmin;
     display: flex;
     flex-direction: column;
     gap: 1em;
-    max-width: 700px;
     flex-wrap: wrap;
+    padding-left: 4rem;
+    max-width: 900px;
 }
 
 .text__paragraph > i {
@@ -92,18 +103,25 @@
 /* MAIN - FORM */
 
 .main__form {
-    max-width: 700px;
     display: flex;
     flex-direction: column;
-    gap: .7em;
+    gap: .7em;  
 }
 
 .form__elements {
+    width: 100%;
+    padding: 2em 0px;
+    box-shadow: 5px 5px 10px #888888;
+    background-color: white;
+    padding-left: 4rem;
+    
+}
+
+.container--form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
     gap: 1vmin;
-    align-items: center;
-    justify-content: center;
+    max-width: 700px;
 }
 
 .elements__element {
@@ -111,8 +129,57 @@
     flex-direction: column;
 }
 
+.element__label {
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.element__input {
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 2px solid hsl(195, 86%, 10%);
+}
+
+.element__input:valid {
+    border: 2px solid hsl(195, 86%, 40%);
+    background-color: hsl(195, 86%, 99%);
+}
+
+.element__input:invalid{
+    border: 2px solid hsl(0, 86%, 40%);
+    background-color: hsl(0, 86%, 99%);
+}
+
 .form__btn {
-    width: fit-content;
+    width: clamp(100px, 200px, 300px);
+    height: clamp(25px, 50px, 75px);
+    margin-left: 4rem;
+    margin-top: 1.5rem;
+    border-radius: 25px;
+    border: 0px;
+    background-color: hsl(195, 86%, 40%);
+    color: white;
+    font-size: weight;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.form__btn:hover {
+    background-color: hsl(195, 86%, 30%);
+}
+
+.form__btn:active {
+    transform: scale(0.95);
+    background-color: hsl(195, 86%, 10%);
 }
 
 /* MAIN - LOGIN */
+
+.main__login {
+    margin-top: -1.5em;
+    margin-left: 4rem;
+}
+.login__link {
+    color: hsl(16, 84%, 40%);
+}
