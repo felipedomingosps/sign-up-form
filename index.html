@@ -23,12 +23,12 @@
     </header>
     <main class="main">
         <div class="main__text">
-            <p class="text__paragraph">This is not a real online service! You know you need something like this in your life to help you realizer your deepest dreams.</p>
+            <p class="text__paragraph">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
             <p class="text__paragraph">Sign-up <i>now</i> to get started.</p>
             <p class="text__paragraph">You know you want to.</p>
         </div>
 
-        <form class="main__form" action="#" method="get">
+        <form class="main__form" action="#" method="get" id="form">
             <div class="form__elements">
                 <div class="container--form">             
                     <div class="elements__element">
@@ -49,11 +49,11 @@
                     </div>
                     <div class="elements__element">
                         <label for="password" class="element__label">Password</label>
-                        <input type="password" class="element__input" id="password" name="password" placeholder=" " pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" required>
+                        <input type="password" class="element__input" id="password" name="password" placeholder=" " pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" onfocusout="passwordMatch()" required>
                     </div>
                     <div class="elements__element">
                         <label for="confirm-password" class="element__label">Confirm Password</label>
-                        <input type="password" class="element__input" id="confirm-password" name="confirm-password" placeholder=" " required>
+                        <input type="password" class="element__input" id="confirm-password" name="confirm-password" placeholder=" " onfocusout="passwordMatch()" required>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                 Already have an account? <a href="http://" target="_blank" rel="noopener noreferrer" class="login__link">Log in</a>
             </p>
         </div>
-        </div>
+    </main>
     <footer>
     </footer>
 
