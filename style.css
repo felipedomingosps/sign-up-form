@@ -142,12 +142,12 @@
     border: 2px solid hsl(195, 86%, 10%);
 }
 
-.element__input:valid {
+.element__input:not(:focus):not(:placeholder-shown):valid {
     border: 2px solid hsl(195, 86%, 40%);
     background-color: hsl(195, 86%, 99%);
 }
 
-.element__input:invalid{
+.element__input:not(:focus):not(:placeholder-shown):invalid{
     border: 2px solid hsl(0, 86%, 40%);
     background-color: hsl(0, 86%, 99%);
 }
